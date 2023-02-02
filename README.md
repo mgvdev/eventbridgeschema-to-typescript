@@ -9,7 +9,7 @@ I made this project cause the typescript generator for eventbridge schema of aws
 ## Usage/Examples
 
 ```bash
-npm i @mgvdev/eventbridgeschema-to-typescript
+npm i @mgvdev/eventbridgeschema-to-typescript --save-dev
 ```
 
 In your package.json script you can add

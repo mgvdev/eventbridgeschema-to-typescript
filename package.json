@@ -1,6 +1,6 @@
 {
   "name": "@mgvdev/eventbridgeschema-to-typescript",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI tool to generate typescript interface from aws eventbridge schemas",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,7 +33,11 @@
   },
   "keywords": [
     "typescript",
-    "CLI"
+    "CLI",
+    "aws",
+    "eventbridge",
+    "schema",
+    "interface"
   ],
   "engines": {
     "node": ">=10"
