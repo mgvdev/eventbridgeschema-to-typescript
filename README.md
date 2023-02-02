@@ -59,3 +59,8 @@ To run tests, run the following command
 ## Feedback
 
 If you have any feedback, please open an issues on this repo
+
+## Todo
+
+- Finish unit test
+- Add error handling when AWS Credentials are not set
