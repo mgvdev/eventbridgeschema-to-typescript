@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node ./dist/index.js",
-    "lint": "eslint . --ext '.js,.jsx,.ts,.tsx,.md'",
+    "lint": "eslint src/ --fix",
     "prettier": "prettier -c --write '**/*'",
     "test": "jest --config jest.config.json --no-cache",
     "test:watch": "jest --config jest.config.json --no-cache --watch",

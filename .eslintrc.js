@@ -24,6 +24,9 @@ module.exports = {
     {
       files: ["*.ts", "*.tsx"],
       rules: {
+        "no-restricted-syntax": 0,
+        "no-shadow": 0,
+        "import/prefer-default-export": 0,
         "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
       },
     },
