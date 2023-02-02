@@ -1,18 +1,20 @@
 # eventbridgeschema-to-typescript
 
-Little CLI tool to download and generate typescript interface from aws eventbridge schema.
+A small command-line tool for downloading and generating TypeScript interfaces from AWS EventBridge schemas.
 
-## Why this project
+## Purpose
 
-I made this project cause the typescript generator for eventbridge schema of aws generate class and don't use the required field of schema to make properties optionnal.
+This project was created to address the limitations of the AWS EventBridge schema TypeScript generator, which generates classes instead of interfaces and does not make use of the required fields in the schema to mark properties as optional.
 
-## Usage/Examples
+## Usage
+
+Install the package as a dev dependency
 
 ```bash
 npm i @mgvdev/eventbridgeschema-to-typescript --save-dev
 ```
 
-In your package.json script you can add
+Add the following script to your package.json:
 
 ```bash
 ebs2ts --registry-name="my_registry" --schema-name="my_schema" --path="./src/generated"
@@ -20,9 +22,9 @@ ebs2ts --registry-name="my_registry" --schema-name="my_schema" --path="./src/gen
 
 ## CLI Arguments
 
-- registry-name (-r) : The name of your registry
-- schema-name (-n) : The schemas name, you can pass multiple
-- path (-p) : path of where you want generate the typescript interface (default `./src/generated`)
+- registry-name (-r): the name of your registry
+- schema-name (-n): the name of the schema(s), multiple names can be passed
+- path (-p): the path to generate the TypeScript interface (default is ./src/generated)
 
 ## Run Locally
 
@@ -54,13 +56,13 @@ To run tests, run the following command
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
 
 ## Feedback
 
-If you have any feedback, please open an issues on this repo
+Please feel free to provide feedback by opening an issue on the repository.
 
 ## Todo
 
-- Finish unit test
-- Add error handling when AWS Credentials are not set
+- Complete unit testing
+- Add error handling for missing AWS credentials.
