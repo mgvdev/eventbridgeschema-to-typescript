@@ -54,6 +54,7 @@ export const transformSchema = async (
         console.log(
           chalk.red(`Error: AWS Credentials are not set in your env`)
         );
+        process.exit(1);
       } else {
         console.log(chalk.red(`Error: ${error.reason.name}`));
       }

@@ -73,3 +73,7 @@ Please feel free to provide feedback by opening an issue on the repository.
 - Add aws credentials errors handling
 - Throw an error when the command name are wrong
 - Change chalk version
+
+### [1.1.1] 2023-02-05
+
+- Add process exit code for invalid credentials error
