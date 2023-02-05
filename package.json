@@ -1,12 +1,12 @@
 {
   "name": "@mgvdev/eventbridgeschema-to-typescript",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "CLI tool to generate typescript interface from aws eventbridge schemas",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
   "bin": {
-    "ebs2ts":"dist/index.js"
+    "ebs2ts": "dist/index.js"
   },
   "files": [
     "dist/"
@@ -19,14 +19,12 @@
     "test": "jest --config jest.config.json --no-cache",
     "test:watch": "jest --config jest.config.json --no-cache --watch",
     "prepare": "npm run build && npm run lint && npm run prettier && npm run test"
-    
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run prepare"
     }
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mgvdev/eventbridgeschema-to-typescript.git"
@@ -51,9 +49,9 @@
     "@types/yargs": "^17.0.7",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
-    "eslint": "^8.4.1",
     "aws-sdk-client-mock": "^2.0.1",
     "aws-sdk-client-mock-jest": "^2.0.1",
+    "eslint": "^8.4.1",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
@@ -68,7 +66,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-schemas": "^3.262.0",
-    "chalk": "^5.0.0",
+    "chalk": "^4.1.2",
     "json-schema-to-typescript": "^11.0.3",
     "yargs": "^17.3.0"
   }

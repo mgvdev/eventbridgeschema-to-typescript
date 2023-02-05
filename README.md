@@ -65,4 +65,11 @@ Please feel free to provide feedback by opening an issue on the repository.
 ## Todo
 
 - Complete unit testing
-- Add error handling for missing AWS credentials.
+
+## Changelogs
+
+### [1.1.0] 2023-02-05
+
+- Add aws credentials errors handling
+- Throw an error when the command name are wrong
+- Change chalk version

@@ -1,5 +1,6 @@
 import { Schemas } from "@aws-sdk/client-schemas";
 import { compile } from "json-schema-to-typescript";
+import chalk from "chalk";
 import { writeFileSyncRecursive } from "../utils";
 
 export const transformSchema = async (
@@ -15,7 +16,9 @@ export const transformSchema = async (
     });
 
     if (!rawSchema.Content) {
-      console.log("Schema");
+      console.log(
+        chalk.red(`${schemaName} not exist or are not well formatted`)
+      );
       return;
     }
 
@@ -33,11 +36,28 @@ export const transformSchema = async (
     const typescript = await compile(
       schema.components.schemas.Event,
       schemaName,
-      { enableConstEnums: true, declareExternallyReferenced: true }
+      {
+        enableConstEnums: true,
+        declareExternallyReferenced: true,
+      }
     );
     await writeFileSyncRecursive(`${path}/${schemaName}.ts`, typescript, {});
   });
 
   const describeResult = await Promise.allSettled(describePromise);
+  const resultErrors = describeResult.filter(
+    (result): result is PromiseRejectedResult => result.status === "rejected"
+  );
+  if (resultErrors.length > 0) {
+    resultErrors.forEach((error) => {
+      if (error.reason.name === "CredentialsProviderError") {
+        console.log(
+          chalk.red(`Error: AWS Credentials are not set in your env`)
+        );
+      } else {
+        console.log(chalk.red(`Error: ${error.reason.name}`));
+      }
+    });
+  }
   return describeResult;
 };

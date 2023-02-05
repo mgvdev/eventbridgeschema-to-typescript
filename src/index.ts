@@ -13,12 +13,14 @@ yargs(hideBin(process.argv))
           alias: "r",
           type: "string",
           description: "The name of the registry",
+          requiresArg: true,
         })
         .option("schema-name", {
           alias: "n",
           array: true,
           type: "string",
           description: "The schema name to parse",
+          requiresArg: true,
         })
         .option("path", {
           alias: "p",
@@ -38,4 +40,6 @@ yargs(hideBin(process.argv))
     }
   )
   .demandCommand(1)
+  .strict()
+  .showHelpOnFail(true)
   .parse();
