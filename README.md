@@ -77,3 +77,7 @@ Please feel free to provide feedback by opening an issue on the repository.
 ### [1.1.1] 2023-02-05
 
 - Add process exit code for invalid credentials error
+
+### [1.1.2] 2023-02-06
+
+- Stringify errors

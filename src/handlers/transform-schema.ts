@@ -56,7 +56,7 @@ export const transformSchema = async (
         );
         process.exit(1);
       } else {
-        console.log(chalk.red(`Error: ${error.reason.name}`));
+        console.log(chalk.red(`Error: ${JSON.stringify(error)}`));
       }
     });
   }
