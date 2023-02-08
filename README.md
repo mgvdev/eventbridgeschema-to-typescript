@@ -81,3 +81,7 @@ Please feel free to provide feedback by opening an issue on the repository.
 ### [1.1.2] 2023-02-06
 
 - Stringify errors
+
+### [1.1.3] 2023-02-06
+
+- Process exist code for any error reason
