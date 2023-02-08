@@ -21,7 +21,6 @@ export const transformSchema = async (
       );
       return;
     }
-
     const schema = JSON.parse(rawSchema.Content);
 
     for (const property in schema.components.schemas.Event.properties) {
@@ -55,6 +54,7 @@ export const transformSchema = async (
           chalk.red(`Error: AWS Credentials are not set in your env`)
         );
       } else {
+        console.debug(error);
         console.log(chalk.red(`Error: ${JSON.stringify(error.reason)}`));
       }
       process.exit(1);
