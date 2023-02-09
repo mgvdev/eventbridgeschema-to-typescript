@@ -17,7 +17,7 @@ npm i @mgvdev/eventbridgeschema-to-typescript --save-dev
 Add the following script to your package.json:
 
 ```bash
-ebs2ts --registry-name="my_registry" --schema-name="my_schema" --path="./src/generated"
+ebs2ts transform-schema --registry-name="my_registry" --schema-name="my_schema" --path="./src/generated"
 ```
 
 ## CLI Arguments
